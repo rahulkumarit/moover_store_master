@@ -32,10 +32,11 @@
         <activity
             android:name=".activities.MainActivity"
             android:label="@string/title_activity_main"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"></activity>
 
-        </activity>
-
-
+        <activity
+            android:name=".activities.OptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"></activity>
     </application>
 </manifest>
