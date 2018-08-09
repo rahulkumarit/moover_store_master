@@ -14,15 +14,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_120sdp"
         android:src="@drawable/moov_logo_red" />
 
 
-    <TextView
+     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/rlLayoutButtom"
-        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
         android:layout_marginLeft="@dimen/_30sdp"
         android:layout_marginRight="@dimen/_30sdp"
         android:gravity="center"
@@ -30,7 +30,7 @@
         android:textColor="@color/white" />
 
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/rlLayoutButtom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,23 +41,25 @@
 
         <Button
             android:id="@+id/btnSignUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:background="@drawable/bg_white_button"
             android:text="@string/sign_up"
             android:textColor="@color/colorPrimary" />
 
-
         <Button
             android:id="@+id/btnSignIn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
             android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
             android:background="@drawable/bg_button"
             android:text="@string/sign_in"
             android:textColor="@color/white" />
 
-
-    </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>

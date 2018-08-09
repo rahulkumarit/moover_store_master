@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.moovers.storemanager.R;
+import com.moovers.storemanager.fragments.MyProductFragment;
 import com.moovers.storemanager.fragments.ReportsFragment;
 
 public class MainActivity extends BaseActivity
@@ -75,7 +76,8 @@ public class MainActivity extends BaseActivity
         if (id == R.id.nav_order) {
             Toast.makeText(this, "nav menu", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_product) {
-            Toast.makeText(this, "nav product", Toast.LENGTH_SHORT).show();
+            MyProductFragment myProductFragment=new  MyProductFragment();
+            replaceFragmenr(myProductFragment,myProductFragment.getTag(),false);
         } else if (id == R.id.nav_reports) {
             Toast.makeText(this, "nav reports", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_profile) {
