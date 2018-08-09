@@ -61,12 +61,14 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         String password = edtPassword.getText().toString().trim();
         if (TextUtils.isEmpty(name)) {
             PopUtils.showSnakBar(this, rlLayout, "Please Enter Phone Number.");
-        } else if (TextUtils.isEmpty(password)) {
+         } else if (TextUtils.isEmpty(password)) {
             PopUtils.showSnakBar(this, rlLayout, "Please Enter Password.");
-        } else {
+         } else {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-        }
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            finish();
+          }
     }
 }
 

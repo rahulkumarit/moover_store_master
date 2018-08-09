@@ -8,9 +8,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.moovers.storemanager.R;
-import com.moovers.storemanager.fragments.OrderListFragment;
+import com.moovers.storemanager.fragments.ReportsFragment;
 
 public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -38,8 +39,8 @@ public class MainActivity extends BaseActivity
         toggle.syncState();
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        OrderListFragment orderListFragment = new OrderListFragment();
-        replaceFragmenr(orderListFragment, orderListFragment.getTag(), false);
+        ReportsFragment reportsFragment = new ReportsFragment();
+        replaceFragmenr(reportsFragment, reportsFragment.getTag(), false);
     }
 
     @Override
@@ -62,8 +63,8 @@ public class MainActivity extends BaseActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_favorite) {
-        }
+
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -71,8 +72,19 @@ public class MainActivity extends BaseActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-       /* if (id == R.id.nav_camera) {
-        }*/
+        if (id == R.id.nav_order) {
+            Toast.makeText(this, "nav menu", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_product) {
+            Toast.makeText(this, "nav product", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_reports) {
+            Toast.makeText(this, "nav reports", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_profile) {
+            Toast.makeText(this, "nav profile", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_setting) {
+            Toast.makeText(this, "nav setting", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_logout) {
+            Toast.makeText(this, "nav logout", Toast.LENGTH_SHORT).show();
+        }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
