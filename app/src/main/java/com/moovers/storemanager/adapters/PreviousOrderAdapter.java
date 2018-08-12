@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.moovers.storemanager.R;
+import com.moovers.storemanager.listeners.RvListeners;
 
 import java.util.ArrayList;
 
@@ -18,10 +19,12 @@ public class PreviousOrderAdapter extends RecyclerView.Adapter<PreviousOrderAdap
     private Context context;
     private LayoutInflater inflater;
     private ArrayList<String> pOrders;
+    private RvListeners rvListeners;
 
-    public PreviousOrderAdapter(Context context, ArrayList<String> pOrders) {
+    public PreviousOrderAdapter(Context context, ArrayList<String> pOrders, RvListeners rvListeners) {
         this.context = context;
         this.pOrders = pOrders;
+        this.rvListeners = rvListeners;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
@@ -29,7 +32,7 @@ public class PreviousOrderAdapter extends RecyclerView.Adapter<PreviousOrderAdap
     @Override
     public PreviousViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new PreviousViewHolder(inflater.inflate(R.layout.item_previous_order, parent, false));
-      }
+    }
 
     @Override
     public void onBindViewHolder(@NonNull PreviousViewHolder holder, int position) {

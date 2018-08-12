@@ -27,16 +27,18 @@
                     android:id="@+id/imgCenter"
                     android:layout_width="@dimen/_70sdp"
                     android:layout_height="@dimen/_70sdp"
-                    android:layout_margin="5dp"
+                    android:layout_margin="@dimen/_10sdp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/moov_logo_red" />
+                    android:src="@drawable/moov_offerbanner" />
 
                 <TextView
                     android:id="@+id/txtProductName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:layout_toRightOf="@+id/imgCenter"
-                    android:text="asdasda" />
+                    android:text="Masala Roll"
+                    android:textColor="@color/black" />
 
                 <ImageView
                     android:id="@+id/imgSetting"
@@ -44,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="@dimen/_10sdp"
-                    android:padding="5dp"
+                    android:padding="@dimen/_8sdp"
                     android:src="@drawable/moov_morebutton" />
 
 
@@ -55,11 +57,36 @@
                     android:layout_below="@+id/txtProductName"
                     android:layout_toLeftOf="@+id/imgSetting"
                     android:layout_toRightOf="@+id/imgCenter"
-                    android:text="adasdadjaklsdjalksjdalksjdalkdja ajdajksdhadasda" />
+                    android:text="Medium spicey masala roll with green chatni...." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtProductDetails"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_toLeftOf="@+id/imgSetting"
+                    android:layout_toRightOf="@+id/imgCenter"
+                    android:drawableLeft="@drawable/rupee_small"
+                    android:gravity="center_vertical"
+                    android:text="90" />
 
 
             </RelativeLayout>
 
+            <android.support.v7.widget.AppCompatRatingBar
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressBackgroundTint="@color/gray"
+                android:progressTint="@color/yellow"
+                android:rating="4"
+                android:stepSize="0.5"
+
+                />
 
         </LinearLayout>
 

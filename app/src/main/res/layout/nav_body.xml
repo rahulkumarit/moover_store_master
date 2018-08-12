@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/txtMyOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:drawableLeft="@drawable/ic_menu_camera"
+        android:drawablePadding="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/my_orders" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+
+    <TextView
+        android:id="@+id/txtMyProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:drawableLeft="@drawable/ic_menu_camera"
+        android:drawablePadding="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/my_products" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+
+    <TextView
+        android:id="@+id/txtReports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:drawableLeft="@drawable/ic_menu_camera"
+        android:drawablePadding="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/reports" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+
+    <TextView
+        android:id="@+id/txtProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:drawableLeft="@drawable/ic_menu_camera"
+        android:drawablePadding="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/profile" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+
+    <TextView
+        android:id="@+id/txtSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:drawableLeft="@drawable/ic_menu_camera"
+        android:drawablePadding="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/settings" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+
+    <TextView
+        android:id="@+id/txtLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:drawableLeft="@drawable/ic_menu_camera"
+        android:drawablePadding="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/logout" />
+
+
+</LinearLayout>

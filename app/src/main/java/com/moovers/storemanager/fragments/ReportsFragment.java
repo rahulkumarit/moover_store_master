@@ -14,8 +14,7 @@ public class ReportsFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        inflater.inflate(R.layout.fragment_report_fragment, container, false);
-        return null;
+        return inflater.inflate(R.layout.fragment_report_fragment, container, false);
     }
 
     @Override

@@ -10,8 +10,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.moovers.storemanager.R;
+import com.moovers.storemanager.activities.MainActivity;
 import com.moovers.storemanager.adapters.PreviousOrderAdapter;
 import com.moovers.storemanager.adapters.TodayOrderAdapter;
+import com.moovers.storemanager.listeners.RvListeners;
 
 import java.util.ArrayList;
 
@@ -29,7 +31,7 @@ public class OrderListFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         return inflater.inflate(R.layout.fragment_order_list, container, false);
-     }
+    }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -37,7 +39,6 @@ public class OrderListFragment extends BaseFragment {
         txtCurrentOrder = view.findViewById(R.id.txtCurrentOrder);
         rvTodayOrder = view.findViewById(R.id.rvTodayOrder);
         rvPreviuosOrder = view.findViewById(R.id.rvPreviuosOrder);
-
         try {
             initComponents();
         } catch (Exception e) {
@@ -47,9 +48,10 @@ public class OrderListFragment extends BaseFragment {
 
     @Override
     public void initComponents() {
+        todayOrders.clear();
+        preOrders.clear();
         todayOrders.add("hello");
         preOrders.add("prev");
-        todayOrders.add("hello");
         preOrders.add("prev");
         todayOrders.add("hello");
         preOrders.add("prev");
@@ -57,9 +59,25 @@ public class OrderListFragment extends BaseFragment {
         preOrders.add("prev");
         rvTodayOrder.setLayoutManager(new LinearLayoutManager(getContext()));
         rvPreviuosOrder.setLayoutManager(new LinearLayoutManager(getContext()));
-        todayOrderAdapter = new TodayOrderAdapter(getContext(), todayOrders);
-        previousOrderAdapter = new PreviousOrderAdapter(getContext(), preOrders);
+        todayOrderAdapter = new TodayOrderAdapter(getContext(), todayOrders, new RvListeners() {
+            @Override
+            public void onItemClick(View view, int pos) {
+                OrderDetailsFragment orderDetailsFragment = new OrderDetailsFragment();
+                MainActivity mainActivity = (MainActivity) getActivity();
+                mainActivity.replaceFragmenr(orderDetailsFragment, orderDetailsFragment.getTag(), true);
+            }
+        });
         rvTodayOrder.setAdapter(todayOrderAdapter);
+        rvTodayOrder.setNestedScrollingEnabled(false);
+        previousOrderAdapter = new PreviousOrderAdapter(getContext(), preOrders, new RvListeners() {
+            @Override
+            public void onItemClick(View view, int pos) {
+
+            }
+        });
         rvPreviuosOrder.setAdapter(previousOrderAdapter);
-     }
+        rvPreviuosOrder.setNestedScrollingEnabled(false);
+    }
+
+
 }

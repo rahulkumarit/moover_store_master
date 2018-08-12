@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.moovers.storemanager.R;
+import com.moovers.storemanager.utils.PopUtils;
+import com.moovers.storemanager.utils.StaticUtils;
 
 /**
  * Created by SONI on 8/8/2018.
@@ -15,6 +18,7 @@ import com.moovers.storemanager.R;
 public class OptionActivity extends BaseActivity implements View.OnClickListener {
 
     private Button btnSignUp, btnSignIn;
+    private RelativeLayout rlLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,6 +36,7 @@ public class OptionActivity extends BaseActivity implements View.OnClickListener
     public void initComponents() {
         btnSignUp = findViewById(R.id.btnSignUp);
         btnSignIn = findViewById(R.id.btnSignIn);
+        rlLayout=findViewById(R.id.rlLayout);
         btnSignUp.setOnClickListener(this);
         btnSignIn.setOnClickListener(this);
     }
@@ -43,6 +48,7 @@ public class OptionActivity extends BaseActivity implements View.OnClickListener
                 goToLogin();
                 break;
             case R.id.btnSignUp:
+                PopUtils.showSnakBar(OptionActivity.this,rlLayout,"Sign up is not availale");
                 break;
             default:
                 break;
