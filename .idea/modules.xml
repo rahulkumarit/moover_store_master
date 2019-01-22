@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MooversStroreManager.iml" filepath="$PROJECT_DIR$/MooversStroreManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\MooversStroreManager\moover_store_master.iml" filepath="E:\MooversStroreManager\moover_store_master.iml" />
     </modules>
   </component>
 </project>

@@ -4,41 +4,63 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/llOrder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_10sdp"
-            android:background="@drawable/bg_cancel"
-            android:drawablePadding="@dimen/_10sdp"
-            android:drawableRight="@drawable/moov_downarrow"
-            android:paddingBottom="@dimen/_5sdp"
-            android:paddingLeft="@dimen/_20sdp"
-            android:paddingStart="@dimen/_20sdp"
-            android:paddingTop="@dimen/_5sdp"
-            android:text="All order"
+            android:background="@drawable/bg_cancel">
 
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableRight="@drawable/moov_downarrow"
+                android:fontFamily="@font/opensans_regular"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="@string/all_order" />
+
+        </LinearLayout>
 
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/llRefresh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_margin="@dimen/_10sdp"
-            android:drawablePadding="@dimen/_10sdp"
-            android:drawableRight="@drawable/moov_downarrow"
-            android:paddingLeft="@dimen/_20sdp"
-            android:paddingStart="@dimen/_20sdp"
-            android:text="All order" />
+            android:background="@drawable/bg_cancel">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:drawableLeft="@drawable/moov_refreshicon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/opensans_regular"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="Refresh" />
+
+        </LinearLayout>
 
 
     </RelativeLayout>
 
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"></android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

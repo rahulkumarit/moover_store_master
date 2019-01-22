@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.moovers.storemanager.R;
+import com.moovers.storemanager.activities.MainActivity;
 
 public class ReportsFragment extends BaseFragment {
 
@@ -24,6 +25,17 @@ public class ReportsFragment extends BaseFragment {
 
     @Override
     public void initComponents() {
+        setToolbar();
+    }
+
+    private void setToolbar() {
+        MainActivity mainActivity = (MainActivity) getActivity();
+        mainActivity.imgCalender.setVisibility(View.GONE);
+        mainActivity.imgAddProduct.setVisibility(View.GONE);
+        mainActivity.imgBack.setVisibility(View.GONE);
+        mainActivity.imgMenu.setVisibility(View.VISIBLE);
+        mainActivity.rlNotification.setVisibility(View.VISIBLE);
 
     }
+
 }

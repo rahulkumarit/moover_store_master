@@ -24,9 +24,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <include layout="@layout/nav_header_main" />
 
+            <include layout="@layout/nav_header_main" />
             <include layout="@layout/nav_body" />
-          </LinearLayout>
+
+
+         </LinearLayout>
     </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>

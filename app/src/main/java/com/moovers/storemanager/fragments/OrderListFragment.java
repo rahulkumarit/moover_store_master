@@ -59,6 +59,7 @@ public class OrderListFragment extends BaseFragment {
         preOrders.add("prev");
         rvTodayOrder.setLayoutManager(new LinearLayoutManager(getContext()));
         rvPreviuosOrder.setLayoutManager(new LinearLayoutManager(getContext()));
+        setToolbar();
         todayOrderAdapter = new TodayOrderAdapter(getContext(), todayOrders, new RvListeners() {
             @Override
             public void onItemClick(View view, int pos) {
@@ -77,6 +78,18 @@ public class OrderListFragment extends BaseFragment {
         });
         rvPreviuosOrder.setAdapter(previousOrderAdapter);
         rvPreviuosOrder.setNestedScrollingEnabled(false);
+    }
+
+
+    private void setToolbar() {
+        MainActivity mainActivity = (MainActivity) getActivity();
+        mainActivity.imgCalender.setVisibility(View.GONE);
+        mainActivity.imgAddProduct.setVisibility(View.GONE);
+        mainActivity.rlNotification.setVisibility(View.VISIBLE);
+        mainActivity.imgBack.setVisibility(View.GONE);
+        mainActivity.imgMenu.setVisibility(View.VISIBLE);
+
+
     }
 
 

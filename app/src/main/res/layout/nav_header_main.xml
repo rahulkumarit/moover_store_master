@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            app:srcCompat="@drawable/moov_profileavatar" />
 
         <TextView
             android:id="@+id/txtName"
@@ -27,7 +27,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_toRightOf="@+id/imgProfile"
-            android:text="Karan Kumar"
+            android:text="@string/karan_kumar"
             android:textColor="@color/black" />
 
         <ImageView

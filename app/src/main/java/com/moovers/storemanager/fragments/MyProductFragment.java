@@ -45,6 +45,7 @@ public class MyProductFragment extends BaseFragment implements RvListeners {
 
     @Override
     public void initComponents() {
+        setToolbar();
         myProducts.add("1");
         myProducts.add("1");
         myProducts.add("1");
@@ -56,6 +57,15 @@ public class MyProductFragment extends BaseFragment implements RvListeners {
         myProducts.add("1");
         myProductAdapter = new MyProductAdapter(getContext(), myProducts, this);
         rvMyProduct.setAdapter(myProductAdapter);
+    }
+
+    private void setToolbar() {
+        MainActivity mainActivity = (MainActivity) getActivity();
+        mainActivity.rlNotification.setVisibility(View.GONE);
+        mainActivity.imgCalender.setVisibility(View.GONE);
+        mainActivity.imgBack.setVisibility(View.GONE);
+        mainActivity.imgMenu.setVisibility(View.VISIBLE);
+        mainActivity.imgAddProduct.setVisibility(View.VISIBLE);
     }
 
     @Override
